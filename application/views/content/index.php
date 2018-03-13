@@ -1,27 +1,36 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 13.06
- */
+
 ?>
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<h1>
-			Dashboard
-			<small>Control panel</small>
+			<?php
+			if(!isset($primary_title)){
+				echo "Judul Utama";
+			}else{
+				echo $primary_title;
+			}
+			?>
+			<small>
+				<?php
+				if(!isset($sub_primary_title)){
+					echo "Sub judul utama";
+				}else{
+					echo $sub_primary_title;
+				}
+				?>
+			</small>
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li class="active">Dashboard</li>
+			<!-- <i class="ion-ios7-home"></i> -->
+			<?php echo $this->breadcrumb->output()?>
 		</ol>
 	</section>
 
 	<!-- Main content -->
 	<section class="content">
-		<?php $this->load->view('content/home/index'); ?>
+		<?php echo $content_for_layout; ?>
 	</section>
 	<!-- /.content -->
 </div>

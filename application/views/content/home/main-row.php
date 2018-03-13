@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 19.19
- */
+
 ?>
 <div class="row">
 	<!-- Left col -->

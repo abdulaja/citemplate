@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 13.06
- */
+
 ?>
 <header class="main-header">
 	<!-- Logo -->

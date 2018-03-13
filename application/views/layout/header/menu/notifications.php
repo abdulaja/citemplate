@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 18.55
- */
+
 ?>
 <li class="dropdown notifications-menu">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">

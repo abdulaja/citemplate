@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 21.10
- */
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,19 +8,19 @@
 <body class="hold-transition login-page">
 <div class="login-box">
 	<div class="login-logo">
-		<a href="<?php echo base_url('/welcome/login');?>"><b>Admin</b>LTE</a>
+		<a href="<?php echo base_url('login');?>"><b>Admin</b>LTE</a>
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
 		<p class="login-box-msg">Sign in to start your session</p>
 
-		<form action="<?php echo base_url('/auth/go');?>" method="post">
+		<?php echo form_open("auth/login_process");?>
 			<div class="form-group has-feedback">
-				<input type="email" class="form-control" placeholder="Email">
+				<input type="text" class="form-control" name="username" placeholder="Username" />
 				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 			</div>
 			<div class="form-group has-feedback">
-				<input type="password" class="form-control" placeholder="Password">
+				<input type="password" class="form-control" name="password" placeholder="Password" />
 				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 			</div>
 			<div class="row">
@@ -42,7 +37,7 @@
 				</div>
 				<!-- /.col -->
 			</div>
-		</form>
+		<?php echo form_close();?>
 
 		<a href="#">I forgot my password</a><br>
 		<!--<a href="register.html" class="text-center">Register a new membership</a>-->

@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 22.58
- */
-session_start();
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller {
 
@@ -51,12 +45,13 @@ class Auth extends CI_Controller {
 				$result = $this->m_auth->read_user_information($username);
 				if ($result != FALSE) {
 					$session_data = array(
-						'username' => $result[0]->username,
-						'email' => $result[0]->user_mail
+						'username' => $result->user_name,
+						'email' => $result->user_email
 					);
 					//Add user data in session
 					$this->session->set_userdata('logged_in', $session_data);
-					$this->load->view('layout/layout');
+					//$this->load->view('layout/layout');
+					redirect('home', 'refresh');
 				}
 			} else {
 				$data = array(

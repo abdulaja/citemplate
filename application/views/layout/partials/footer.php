@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 13.06
- */
+
 ?>
 <footer class="main-footer">
 	<div class="pull-right hidden-xs">

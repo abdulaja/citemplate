@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 13.06
- */
+
 ?>
 <aside class="main-sidebar">
 	<!-- sidebar: style can be found in sidebar.less -->

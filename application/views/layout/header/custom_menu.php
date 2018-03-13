@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: muhammad.azis
- * Date: 16/12/2017
- * Time: 18.51
- */
+
 ?>
 <nav class="navbar navbar-static-top">
 	<!-- Sidebar toggle button-->
