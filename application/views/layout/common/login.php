@@ -14,13 +14,20 @@
 	<div class="login-box-body">
 		<p class="login-box-msg">Sign in to start your session</p>
 
-		<?php echo form_open("auth/login_process");?>
+		<?php echo form_open("login");?>
+			<!-- notification -->
+			<div class="alert alert-danger alert-dismissable col-centered" <?php if(is_string($message)){echo 'style="display:block; margin-bottom:7px;"';}else{echo 'style="display:none;"';}?> >
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<?php echo $message;?>
+			</div>
 			<div class="form-group has-feedback">
-				<input type="text" class="form-control" name="username" placeholder="Username" />
+				<!--<input type="text" class="form-control" name="username" placeholder="Username" />-->
+				<?php echo form_input($username);?>
 				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 			</div>
 			<div class="form-group has-feedback">
-				<input type="password" class="form-control" name="password" placeholder="Password" />
+				<!--<input type="password" class="form-control" name="password" placeholder="Password" />-->
+				<?php echo form_input($password);?>
 				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 			</div>
 			<div class="row">

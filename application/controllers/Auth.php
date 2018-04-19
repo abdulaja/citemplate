@@ -20,12 +20,40 @@ class Auth extends CI_Controller {
 	}
 
 	public function login() {
-		$this->load->view('layout/common/login');
+		$this->data['title_for_layout'] = "Login";
+
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+
+		if ($this->form_validation->run() == true) {
+
+		} else {
+			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+
+			$this->data['username'] = array(
+				'id' => 'username',
+				'name' => 'username',
+				'type' => 'text',
+				'value' => $this->form_validation->set_value('username'),
+				'class' => 'form-control',
+				'placeholder' => 'Username'
+			);
+			$this->data['password'] = array(
+				'id' => 'password',
+				'name' => 'password',
+				'type' => 'password',
+				'value' => $this->form_validation->set_value('password'),
+				'class' => 'form-control',
+				'placeholder' => 'Password'
+			);
+
+			$this->load->view('layout/common/login', $this->data);
+		}
 	}
 
 	public function login_process() {
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
 			if (isset($this->session->userdata['logged_in'])) {

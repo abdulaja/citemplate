@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Abdulaja
- * Date: 04/02/2018
- * Time: 14.35
- */
 
 class M_auth extends CI_Model {
 
